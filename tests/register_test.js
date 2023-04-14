@@ -1,9 +1,12 @@
 Feature('register');
 
 const NEW_USER = {
-    firstName: "Oleg",
-    lastName: "9",
-    email: Date.now() + '@test.com',
+    firstName: "Ivan",
+    lastName: "37",
+    emailField: 'ihappynavi' + Date.now() + '@test.com',
+    telephoneField: '380732761986',
+    passwordField: 'PAss21!!',
+    passwordConfirmField: 'PAss21!!',
 };
 
 Scenario('register new user', ({ I, basePage, registerPage }) => {
@@ -12,11 +15,8 @@ Scenario('register new user', ({ I, basePage, registerPage }) => {
     basePage.clickMyRegisterLink();
     registerPage.verifyRegisterPage();
     registerPage.fillNewUserForm(NEW_USER);
+    registerPage.clickPolicyAgree();
+    registerPage.submitRegisterForm();
     pause();
 });
 
-xScenario('grab price', async ({ I }) => {
-    I.amOnPage('http://opencart.qatestlab.net/index.php?route=product/product&path=20_264&product_id=29');
-    const price = await I.grabTextFrom({ xpath: '//*[@id="content"]/div[1]/div[2]/div/div[1]/span[1]' });
-    console.log(+price.slice(1));
-});

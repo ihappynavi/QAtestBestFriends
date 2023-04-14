@@ -17,7 +17,7 @@ exports.config = {
     Playwright: {
       url: 'http://opencart.qatestlab.net/index.php',
       waitForNavigation: 'networkidle',
-      waitForTimeout: 5000,
+      waitForTimeout: 10000,
       show: true,
       browser: 'chromium'
     }
@@ -27,5 +27,5 @@ exports.config = {
     basePage: "./pages/base.js",
     registerPage: "./pages/register.js"
   },
-  name: 'js4_adudyak'
+  name: 'QAtestBestFriends'
 }
