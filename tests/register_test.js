@@ -3,10 +3,9 @@ Feature('register');
 const NEW_USER = {
     firstName: "Ivan",
     lastName: "37",
-    emailField: 'ihappynavi' + Date.now() + '@test.com',
-    telephoneField: '380732761986',
-    passwordField: 'PAss21!!',
-    passwordConfirmField: 'PAss21!!',
+    email: 'ihappynavi' + Date.now() + '@test.com',
+    telephone: '380732761986',
+    password: 'PAss21!!',
 };
 
 Scenario('register new user', ({ I, basePage, registerPage }) => {
@@ -17,6 +16,5 @@ Scenario('register new user', ({ I, basePage, registerPage }) => {
     registerPage.fillNewUserForm(NEW_USER);
     registerPage.clickPolicyAgree();
     registerPage.submitRegisterForm();
-    pause();
 });
 

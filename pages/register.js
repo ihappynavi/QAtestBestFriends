@@ -31,10 +31,10 @@ module.exports = {
   fillNewUserForm(user) {
     I.fillField(this.firstNameField, user.firstName);
     I.fillField(this.lastNameField, user.lastName);
-    I.fillField(this.emailField, user.emailField);
-    I.fillField(this.telephoneField, user.telephoneField);
-    I.fillField(this.passwordField, user.passwordField);
-    I.fillField(this.passwordConfirmField, user.passwordConfirmField);
+    I.fillField(this.emailField, user.email);
+    I.fillField(this.telephoneField, user.telephone);
+    I.fillField(this.passwordField, user.password);
+    I.fillField(this.passwordConfirmField, user.password);
   },
 };
 
